@@ -1,12 +1,11 @@
 import React from 'react';
-
 import { Cards, CountryPicker, Charts } from './components';
 import { fetchData } from './api/';
 import styles from './App.module.css';
 
-//import image from './images/image.png';
 
-class App extends React.Component {
+//yarimport image from './images/image.png';
+  class App extends React.Component {
   state = {
     data: {},
     country: '',
@@ -15,7 +14,7 @@ class App extends React.Component {
   async componentDidMount() {
     const data = await fetchData();
 
-    this.setState({ data });
+    this.setState({ data });//its easier to see what we set.
   }
 
   handleCountryChange = async (country) => {
